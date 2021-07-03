@@ -1,0 +1,21 @@
+def play():
+    user = input("Твой выбор... 'К' камень , 'Б' Бумага, 'Н' ножницы\n")
+    computer = random.choice(['К', 'Б', 'Н'])
+
+    if user == computer:
+        return 'It\'s a tie'
+
+    # r > s, s > p, p > r
+    if is_win(user, computer):
+        return 'Ты выйграл!'
+
+    return 'Ты проиграл!'
+
+def is_win(player, opponent):
+    # return true if player wins
+    # r > s, s > p, p > r
+    if (player == 'К' and opponent == 'Н') or (player == 'Н' and opponent == 'К') \
+        or (player == 'Б' and opponent == 'К'):
+        return True
+
+print(play())
