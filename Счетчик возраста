@@ -1,0 +1,5 @@
+Birth_year=input("В каком году ты родился?...")
+
+age = 2021-int(Birth_year)
+
+print(f'Ваш возраст :{age}')
